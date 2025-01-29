@@ -1,0 +1,38 @@
+{
+    "name": "ನಮ್ಮೂರ Basket",
+    "short_name": "ನಮ್ಮೂರ Basket",
+    "description": "ನಮ್ಮೂರ Basket is your go-to app for fresh produce and local groceries.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ff5722",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/android-chrome-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+      {
+        "src": "/android-chrome-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+      {
+        "src": "/android-chrome-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }
+    ]
+  }
+  
