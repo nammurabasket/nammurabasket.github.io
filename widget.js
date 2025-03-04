@@ -1,34 +1,47 @@
 (function(w, d) {
-    // Create the widget container
-    const widgetContainer = document.createElement("div");
-    widgetContainer.classList.add("widget-container");
-
-    // Add content to the widget container
-    const widgetContent = document.createElement("p");
-    widgetContent.textContent = "Hello, World!";
-    widgetContainer.appendChild(widgetContent);
-
-    // Create a button
-    const button = document.createElement("button");
-    button.textContent = "Click Me";
-    button.onclick = function() {
-        alert("Button clicked!");
+    // Create the floating action button
+    const fab = document.createElement("button");
+    fab.classList.add("floating-action-button");
+    fab.innerHTML = "+"; // Using + as the default icon
+    
+    // Add click handler
+    fab.onclick = function() {
+        alert("FAB clicked!");
     };
-    widgetContainer.appendChild(button);
 
     // Add CSS styles
     const styleTag = document.createElement("style");
     styleTag.innerHTML = `
-      .widget-container {
-        width: 200px;
-        height: 100px;
-        background-color: #f0f0f0;
-        padding: 10px;
-        border: 1px solid #ddd;
-      }
+        .floating-action-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .floating-action-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .floating-action-button:active {
+            transform: scale(0.95);
+        }
     `;
     document.head.appendChild(styleTag);
 
-    // Append the widget to the body
-    document.body.appendChild(widgetContainer);
+    // Append the FAB to the body
+    document.body.appendChild(fab);
 })(window, document);
